@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0214FFE-FB3A-4941-857E-120264856588}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Drageon.Server</RootNamespace>
-    <AssemblyName>Drageon.Server</AssemblyName>
+    <ProjectGuid>{B22E10D7-6AAC-4F25-A438-D124FB4BD268}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JuerLibrary</RootNamespace>
+    <AssemblyName>JuerLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,43 +33,20 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JuerLibrary\JuerLibrary.csproj">
-      <Project>{b22e10d7-6aac-4f25-a438-d124fb4bd268}</Project>
-      <Name>JuerLibrary</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Message.cs" />
-    <Compile Include="PluginCore.cs" />
-    <Compile Include="Server.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Server.Designer.cs">
-      <DependentUpon>Server.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs" />
-    <Compile Include="Utils.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Server.resx">
-      <DependentUpon>Server.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Compile Include="FileManager\INIManager.cs" />
+    <Compile Include="HttpHelper\WebHelper.cs" />
+    <Compile Include="HttpTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

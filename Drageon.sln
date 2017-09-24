@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drageon.Server", "Drageon.Server\Drageon.Server.csproj", "{D0214FFE-FB3A-4941-857E-120264856588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JuerLibrary", "JuerLibrary\JuerLibrary.csproj", "{B22E10D7-6AAC-4F25-A438-D124FB4BD268}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D0214FFE-FB3A-4941-857E-120264856588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0214FFE-FB3A-4941-857E-120264856588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0214FFE-FB3A-4941-857E-120264856588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E10D7-6AAC-4F25-A438-D124FB4BD268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E10D7-6AAC-4F25-A438-D124FB4BD268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E10D7-6AAC-4F25-A438-D124FB4BD268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E10D7-6AAC-4F25-A438-D124FB4BD268}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
