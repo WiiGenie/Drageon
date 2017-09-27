@@ -51,7 +51,7 @@ namespace Drageon.Server
                 }
             }
         }
-        #region    消息盒子更新事件
+        #region    未读消息盒子更新事件
         private delegate void UserMsgUpdataHandler();
         private event UserMsgUpdataHandler UserMsgUpdata;
         private void MsgUpdata()
