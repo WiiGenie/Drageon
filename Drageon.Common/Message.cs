@@ -71,6 +71,7 @@ namespace Drageon.Common
         }
         public override string ToString()
         {
+            //将直接调用Xml序列化方法，将对象转换为Xml文档。
             return XmlUtils.Serializer(this);
         }
     }
