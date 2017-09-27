@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Net;
 using System.Threading;
 using System.Windows.Forms;
+using static Drageon.Common.Message;
 
 namespace Drageon.Server
 {
@@ -15,45 +16,20 @@ namespace Drageon.Server
         BackgroundWorker worker;
         HttpListener httpListener;
         Hashtable client;
+        PluginCore Plugin;
         
         public Server()
         {
             InitializeComponent();
             httpListener = new HttpListener();
             client = new Hashtable();
+            Plugin = new PluginCore();
             
             worker = new BackgroundWorker();
             worker.DoWork += Init;
             worker.RunWorkerAsync();
         }
 
-        public enum MsgType
-        {
-            /// <summary>
-            /// 基本信息
-            /// </summary>
-            Basic,
-            /// <summary>
-            /// 系统日志信息
-            /// </summary>
-            System,
-            /// <summary>
-            /// 用户发送信息
-            /// </summary>
-            User,
-            /// <summary>
-            /// 插件反馈信息
-            /// </summary>
-            Plugin,
-            /// <summary>
-            /// 严重错误信息
-            /// </summary>
-            Error,
-            /// <summary>
-            /// 错误警告信息
-            /// </summary>
-            Warnning
-        }
         private void Output(string text, MsgType msgType)
         {
             Action action = () =>
@@ -113,7 +89,15 @@ namespace Drageon.Server
 
         private void Command(string command)
         {
-            string[] args = command.Split(' ');
+            string[] temp = command.Split(' '), args = null;
+            string methud = temp[0];
+
+            if (temp.Length > 1)
+            {
+                args = new string[temp.Length - 1];
+                temp.CopyTo(args, 1);
+            }
+
 
         }
 
